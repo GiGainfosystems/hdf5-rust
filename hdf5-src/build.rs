@@ -69,7 +69,7 @@ fn main() {
         let zlib_lib = "z";
         cfg.define("HDF5_ENABLE_Z_LIB_SUPPORT", "ON")
             .define("H5_ZLIB_HEADER", &zlib_header)
-            .define("ZLIB_FOUND", "ON")
+            .define("ZLIB_FOUND", "ON");
         println!("cargo::metadata=zlib_header={}", zlib_header.to_str().unwrap());
         println!("cargo::metadata=zlib={}", zlib_lib);
     } else {
